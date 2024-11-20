@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5170416-1db0-47c7-829d-91912e48a853" name="Changes" comment="Added random username generator.">
+    <list default="true" id="f5170416-1db0-47c7-829d-91912e48a853" name="Changes" comment="Added assertions and missing pages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CustomerLookupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CustomerLookupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsernameGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsernameSSNGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CustomerRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CustomerRegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsernameSSNGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsernameSSNGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CustomerRegistrationPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CustomerRegistrationPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HomePageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,38 +68,19 @@
     "JUnit.CustomerRegistrationPageTests.executor": "Run",
     "JUnit.CustomerRegistrationPageTests.testRegisterWithValidInformation.executor": "Run",
     "JUnit.HomePageTests.testClickForgotLoginInfoLink.executor": "Run",
+    "JUnit.HomePageTests.testClickRegistrationLink.executor": "Run",
     "JUnit.HomePageTests.testHomePageLoadedSuccessfully.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation">
+  <component name="RunManager" selected="JUnit.CustomerLookupPageTests">
     <configuration name="CustomerLookupPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParabankAutomation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomerLookupPageTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerLookupPageTests.testCustomerLookupWithInvalidInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ParabankAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomerLookupPageTests" />
-      <option name="METHOD_NAME" value="testCustomerLookupWithInvalidInformation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerLookupPageTests.testCustomerLookupWithValidInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ParabankAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomerLookupPageTests" />
-      <option name="METHOD_NAME" value="testCustomerLookupWithValidInformation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,11 +94,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRegistrationPageTests.testRegisterWithValidInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParabankAutomation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomerRegistrationPageTests" />
-      <option name="METHOD_NAME" value="testRegisterWithValidInformation" />
+      <option name="MAIN_CLASS_NAME" value="HomePageTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testClickForgotLoginInfoLink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ParabankAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HomePageTests" />
+      <option name="METHOD_NAME" value="testClickForgotLoginInfoLink" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTests.testClickRegistrationLink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ParabankAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HomePageTests" />
+      <option name="METHOD_NAME" value="testClickRegistrationLink" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation" />
-        <item itemvalue="JUnit.CustomerLookupPageTests.testCustomerLookupWithInvalidInformation" />
         <item itemvalue="JUnit.CustomerLookupPageTests" />
-        <item itemvalue="JUnit.CustomerRegistrationPageTests.testRegisterWithValidInformation" />
         <item itemvalue="JUnit.CustomerRegistrationPageTests" />
+        <item itemvalue="JUnit.HomePageTests" />
+        <item itemvalue="JUnit.HomePageTests.testClickForgotLoginInfoLink" />
+        <item itemvalue="JUnit.HomePageTests.testClickRegistrationLink" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732073867180</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added assertions and missing pages.">
+      <option name="closed" value="true" />
+      <created>1732120462837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732120462837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -191,6 +199,7 @@
     <MESSAGE value="Added tests." />
     <MESSAGE value="Added tests for CustomerLookUpPage." />
     <MESSAGE value="Added random username generator." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added random username generator." />
+    <MESSAGE value="Added assertions and missing pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added assertions and missing pages." />
   </component>
 </project>

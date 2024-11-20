@@ -6,18 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomerLookupPageTests extends  BaseTests {
 
-    static RegistrationData validRegistrationData = new RegistrationData(
-            "Fabian",
-            "Ferreira",
-            "Mapple Park 1023",
-            "Detroit",
-            "Michigan",
-            "34213",
-            "123-3844-1234",
-            "000" + UsernameSSNGenerator.generateSSN(),
-            "fabian_" + UsernameSSNGenerator.generateUsername(),
-            "SU391!sT0",
-            "SU391!sT0");
+    RegistrationData validRegistrationData;
 
     RegistrationData nonMatchingLookupData = new RegistrationData(
             "Fabian",
@@ -26,9 +15,9 @@ public class CustomerLookupPageTests extends  BaseTests {
             "Detroit",
             "Michigan",
             "34213",
-            "(123) 3844-1234",
-            "_" + UsernameSSNGenerator.generateSSN(),
-            "8492340",
+            "123-3844-1234",
+            "123400012",
+            "fabian_user",
             "SU391!sT0",
             "SU391!sT0");
 
@@ -41,6 +30,8 @@ public class CustomerLookupPageTests extends  BaseTests {
     @Test
     public void testCustomerLookupWithValidInformation() {
         CustomerRegistrationPage registrationPage = homePage.clickRegisterLink();
+
+        validRegistrationData = UsernameSSNGenerator.generateNewTestUser();
 
         registrationPage.fillInForm(validRegistrationData);
         DashboardPage dashboardPage = registrationPage.clickRegisterButton();
@@ -56,6 +47,8 @@ public class CustomerLookupPageTests extends  BaseTests {
     @Test
     public void testCustomerLookupWithInvalidInformation() {
         CustomerRegistrationPage registrationPage = homePage.clickRegisterLink();
+
+        validRegistrationData = UsernameSSNGenerator.generateNewTestUser();
 
         registrationPage.fillInForm(validRegistrationData);
         DashboardPage dashboardPage = registrationPage.clickRegisterButton();

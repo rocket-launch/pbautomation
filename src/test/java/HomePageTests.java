@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class HomePageTests extends BaseTests {
-    HomePage homePage;
 
     @BeforeEach
     public void setUp() {
@@ -23,12 +22,15 @@ public class HomePageTests extends BaseTests {
     @Test
     public void testClickRegistrationLink() {
         CustomerRegistrationPage registrationPage = homePage.clickRegisterLink();
-        //TODO: Verify registration page.
+        assertEquals(
+                "If you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.",
+                registrationPage.getSignUpTextMessage()
+        );
     }
 
     @Test
     public void testClickForgotLoginInfoLink() {
         CustomerLookupPage lookupPage = homePage.clickForgotLoginInfoLink();
-        //TODO: Verify forgot login info page.
+        assertEquals("Please fill out the following information in order to validate your account.", lookupPage.getCustomerLookupMessage());
     }
 }

@@ -10,18 +10,7 @@ public class CustomerRegistrationPageTests extends BaseTests {
 
     CustomerRegistrationPage registrationPage;
 
-    RegistrationData validRegistrationData = new RegistrationData(
-            "Fabian",
-            "Ferreira",
-            "Mapple Park 1023",
-            "Detroit",
-            "Michigan",
-            "34213",
-            "(123) 3844-1234",
-            "000" + UsernameSSNGenerator.generateSSN(),
-            "_" + UsernameSSNGenerator.generateUsername(),
-            "SU391!sT0",
-            "SU391!sT0");
+    RegistrationData validRegistrationData;
 
     @BeforeEach
     public void setUp() {
@@ -31,6 +20,7 @@ public class CustomerRegistrationPageTests extends BaseTests {
 
     @Test
     public void testRegisterWithValidInformation() {
+        validRegistrationData = UsernameSSNGenerator.generateNewTestUser();
         registrationPage.fillInForm(validRegistrationData);
         DashboardPage dashboardPage = registrationPage.clickRegisterButton();
 

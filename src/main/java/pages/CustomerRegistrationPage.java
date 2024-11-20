@@ -10,12 +10,19 @@ import java.util.Optional;
 
 public class CustomerRegistrationPage extends FormPage {
 
+    private By registrationButtonLocator = By.cssSelector(".form2 .button");
+    private By signUpTextMessageLocator = By.cssSelector("#rightPanel p");
+
     public CustomerRegistrationPage(WebDriver driver) {
         super(driver);
     }
 
     public DashboardPage clickRegisterButton() {
-        driver.findElement(By.cssSelector(".form2 .button")).click();
+        driver.findElement(registrationButtonLocator).click();
         return new DashboardPage(driver);
+    }
+
+    public String getSignUpTextMessage() {
+        return driver.findElement(signUpTextMessageLocator).getText();
     }
 }

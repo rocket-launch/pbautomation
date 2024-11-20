@@ -11,6 +11,6 @@ import pages.UsernameSSNGenerator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(UsernameSSNGenerator.generateSSN());
+        //System.out.println(UsernameSSNGenerator.generateSSN());
     }
 }
