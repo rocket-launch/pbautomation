@@ -4,7 +4,7 @@ import pages.*;
 
 public class CustomerLookupPageTests extends  BaseTests {
 
-    RegistrationData validRegistrationData = new RegistrationData(
+    static RegistrationData validRegistrationData = new RegistrationData(
             "Fabian",
             "Ferreira",
             "Mapple Park 1023",
@@ -12,8 +12,8 @@ public class CustomerLookupPageTests extends  BaseTests {
             "Michigan",
             "34213",
             "(123) 3844-1234",
-            "9982304219",
-            "fabian_username",
+            "13234",
+            "fabian" + UsernameGenerator.generateUsername(),
             "SU391!sT0",
             "SU391!sT0");
 
