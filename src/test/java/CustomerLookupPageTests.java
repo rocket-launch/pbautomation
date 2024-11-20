@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebElement;
 import pages.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomerLookupPageTests extends  BaseTests {
 
@@ -11,9 +13,9 @@ public class CustomerLookupPageTests extends  BaseTests {
             "Detroit",
             "Michigan",
             "34213",
-            "(123) 3844-1234",
-            "13234",
-            "fabian" + UsernameGenerator.generateUsername(),
+            "123-3844-1234",
+            "000" + UsernameSSNGenerator.generateSSN(),
+            "fabian_" + UsernameSSNGenerator.generateUsername(),
             "SU391!sT0",
             "SU391!sT0");
 
@@ -25,8 +27,8 @@ public class CustomerLookupPageTests extends  BaseTests {
             "Michigan",
             "34213",
             "(123) 3844-1234",
-            "093591235",
-            "fabian_user",
+            "_" + UsernameSSNGenerator.generateSSN(),
+            "8492340",
             "SU391!sT0",
             "SU391!sT0");
 
@@ -46,9 +48,9 @@ public class CustomerLookupPageTests extends  BaseTests {
 
         CustomerLookupPage lookupPage = homePage.clickForgotLoginInfoLink();
         lookupPage.fillInForm(validRegistrationData);
-        lookupPage.clickLookUpInfo();
+        DashboardPage dashboardLookup = lookupPage.clickToSuccessfulLookupInfo();
 
-        //TODO: assert user is successfully logged in again.
+        assertEquals("Your login information was located successfully. You are now logged in.", dashboardLookup.verifySuccessfulLookupInfo());
     }
 
     @Test
@@ -61,8 +63,8 @@ public class CustomerLookupPageTests extends  BaseTests {
 
         CustomerLookupPage lookupPage = homePage.clickForgotLoginInfoLink();
         lookupPage.fillInForm(nonMatchingLookupData);
-        lookupPage.clickLookUpInfo();
+        lookupPage.clickToUnsuccessfulLookupInfo();
 
-        //TODO: assert user lookout fails.
+        assertEquals("The customer information provided could not be found.", lookupPage.verifyUnsuccessfulLookupInfo());
     }
 }

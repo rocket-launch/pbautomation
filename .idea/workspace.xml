@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5170416-1db0-47c7-829d-91912e48a853" name="Changes" comment="Added tests for CustomerLookUpPage.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/UsernameGenerator.java" afterDir="false" />
+    <list default="true" id="f5170416-1db0-47c7-829d-91912e48a853" name="Changes" comment="Added random username generator.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CustomerLookupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CustomerLookupPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsernameGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/UsernameSSNGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CustomerRegistrationPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CustomerRegistrationPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +60,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "JUnit.CustomerLookupPageTests.testCustomerLookupWithInvalidInformation.executor": "Debug",
-    "JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation.executor": "Debug",
+    "JUnit.CustomerLookupPageTests.executor": "Run",
+    "JUnit.CustomerLookupPageTests.testCustomerLookupWithInvalidInformation.executor": "Run",
+    "JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation.executor": "Run",
     "JUnit.CustomerLookupPageTests.testRegisterWithValidInformation.executor": "Run",
     "JUnit.CustomerRegistrationPageTests and 1 more.executor": "Run",
+    "JUnit.CustomerRegistrationPageTests.executor": "Run",
     "JUnit.CustomerRegistrationPageTests.testRegisterWithValidInformation.executor": "Run",
     "JUnit.HomePageTests.testClickForgotLoginInfoLink.executor": "Run",
     "JUnit.HomePageTests.testHomePageLoadedSuccessfully.executor": "Run",
@@ -69,15 +75,11 @@
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="CustomerLookupPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParabankAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomerLookupPageTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,23 +104,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerLookupPageTests.testRegisterWithValidInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRegistrationPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParabankAutomation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomerLookupPageTests" />
-      <option name="METHOD_NAME" value="testRegisterWithValidInformation" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="CustomerRegistrationPageTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRegistrationPageTests and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRegistrationPageTests.testRegisterWithValidInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ParabankAutomation" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="CustomerRegistrationPageTests" />
-        <pattern testClass="HomePageTests" />
-      </patterns>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomerRegistrationPageTests" />
+      <option name="METHOD_NAME" value="testRegisterWithValidInformation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,9 +127,9 @@
       <list>
         <item itemvalue="JUnit.CustomerLookupPageTests.testCustomerLookupWithValidInformation" />
         <item itemvalue="JUnit.CustomerLookupPageTests.testCustomerLookupWithInvalidInformation" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CustomerLookupPageTests.testRegisterWithValidInformation" />
-        <item itemvalue="JUnit.CustomerRegistrationPageTests and 1 more" />
+        <item itemvalue="JUnit.CustomerLookupPageTests" />
+        <item itemvalue="JUnit.CustomerRegistrationPageTests.testRegisterWithValidInformation" />
+        <item itemvalue="JUnit.CustomerRegistrationPageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732072325290</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added random username generator.">
+      <option name="closed" value="true" />
+      <created>1732073867180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732073867180</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,22 +190,7 @@
     <MESSAGE value="Added classes for pages and base test." />
     <MESSAGE value="Added tests." />
     <MESSAGE value="Added tests for CustomerLookUpPage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for CustomerLookUpPage." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/CustomerLookupPageTests.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added random username generator." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added random username generator." />
   </component>
 </project>

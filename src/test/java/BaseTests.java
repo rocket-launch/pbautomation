@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 
+import java.time.Duration;
+
 public class BaseTests {
     WebDriver driver;
     HomePage homePage;
@@ -16,6 +18,6 @@ public class BaseTests {
 
     @AfterEach
     public void tearDown() {
-
+       driver.quit();
     }
 }
