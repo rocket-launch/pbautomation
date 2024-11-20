@@ -3,11 +3,12 @@ import org.junit.jupiter.api.Test;
 import pages.CustomerRegistrationPage;
 import pages.RegistrationData;
 
-public class CustomerRegistrationPageTests extends  BaseTests {
+public class CustomerRegistrationPageTests extends BaseTests {
 
     CustomerRegistrationPage registrationPage;
+
     RegistrationData validRegistrationData = new RegistrationData(
-            "Fabián",
+            "Fabian",
             "Ferreira",
             "Mapple Park 1023",
             "Detroit",
@@ -22,8 +23,7 @@ public class CustomerRegistrationPageTests extends  BaseTests {
     @BeforeEach
     public void setUp() {
         super.setUp();
-        driver.get("https://parabank.parasoft.com/parabank/register.htm");
-        registrationPage = new CustomerRegistrationPage(driver);
+        registrationPage = homePage.clickRegisterLink();
     }
 
     @Test

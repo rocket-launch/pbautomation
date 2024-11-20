@@ -13,8 +13,6 @@ public class HomePageTests extends BaseTests {
     @BeforeEach
     public void setUp() {
         super.setUp();
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
-        homePage = new HomePage(driver);
     }
 
     @Test

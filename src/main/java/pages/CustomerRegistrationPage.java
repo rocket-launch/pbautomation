@@ -14,7 +14,8 @@ public class CustomerRegistrationPage extends FormPage {
         super(driver);
     }
 
-    public void clickRegisterButton() {
+    public DashboardPage clickRegisterButton() {
         driver.findElement(By.cssSelector(".form2 .button")).click();
+        return new DashboardPage(driver);
     }
 }
